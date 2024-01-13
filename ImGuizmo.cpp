@@ -49,7 +49,7 @@ namespace IMGUIZMO_NAMESPACE
    static const float DEG2RAD = (ZPI / 180.f);
    const float screenRotateSize = 0.06f;
    // scale a bit so translate axis do not touch when in universal
-   const float rotationDisplayFactor = 1.2f;
+   const float rotationDisplayFactor = 1;
 
    static OPERATION operator&(OPERATION lhs, OPERATION rhs)
    {
@@ -1289,7 +1289,7 @@ namespace IMGUIZMO_NAMESPACE
       {
          ImVec2 baseSSpace2 = worldToPos(axis * 0.05f * (float)(j * 2) * gContext.mScreenFactor, gContext.mMVP);
          ImVec2 worldDirSSpace2 = worldToPos(axis * 0.05f * (float)(j * 2 + 1) * gContext.mScreenFactor, gContext.mMVP);
-         gContext.mDrawList->AddLine(baseSSpace2, worldDirSSpace2, IM_COL32(0, 0, 0, 0x80), 6.f);
+         //gContext.mDrawList->AddLine(baseSSpace2, worldDirSSpace2, IM_COL32(0, 0, 0, 0x80), 6.f);
       }
    }
 
